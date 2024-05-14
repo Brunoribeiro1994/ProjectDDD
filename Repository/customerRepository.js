@@ -1,3 +1,4 @@
+//Repositório de dominio do contexto cliente
 class CustomerRepository {
     constructor() {
         this.customers = []

@@ -1,3 +1,4 @@
+//Entidade de ordem se serviço com as suas configurações
 class Order {
     constructor ({ id, customerId, vehicle, paymentMethod, rentalBegin, rentalFinish, totalValue, status}) {
         this.id = id

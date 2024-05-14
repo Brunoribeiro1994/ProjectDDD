@@ -1,3 +1,4 @@
+//Repositório de dominio do contexto ordem de serviço
 class OrderRepository {
     constructor() {
         this.orders = []

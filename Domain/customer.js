@@ -1,3 +1,4 @@
+//Entidade de cliente com as suas configurações
 class Customer {
     constructor({id, name, phone, cpf, email, idade}) {
         this.id = id

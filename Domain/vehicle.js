@@ -1,3 +1,4 @@
+//Entidade de veiculos com as suas configurações
 class Vehicle {
     constructor({id, manufacturer, model, year, color, available, dailyValue}) {
         this.id = id

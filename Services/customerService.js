@@ -6,7 +6,7 @@ class CustomerService {
     constructor (customerRepository) {
         this.customerRepository = customerRepository
     }
-
+    //Evento de dominio, cadastro de um novo cliente
     createCustomer(name, phone, cpf, email, idade) {
         const id = uuid.v4();
         const customer = new Customer ({id, name, phone, cpf, email, idade});

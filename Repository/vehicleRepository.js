@@ -1,3 +1,4 @@
+//Repositório de dominio do contexto veículo
 class VehicleRepository {
     constructor() {
         this.vehicles = []
