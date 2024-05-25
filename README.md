@@ -33,6 +33,7 @@
 1. **Desconto de 10% para Pagamento via PIX**: Quando o pagamento for feito com PIX, aplica-se um desconto de 10% no valor total.
 2. **Proibição de Aluguel para Menores de Idade**: Clientes menores de 18 anos não podem alugar veículos.
 
+## Membros
 
 Nome: Bruno Dessimoni Ribeiro
 RA: 8093458 
