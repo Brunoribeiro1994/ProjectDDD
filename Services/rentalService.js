@@ -2,8 +2,8 @@
 const uuid = require("uuid")
 const Rental = require("../Domain/rental")
 //Context Maps (relacionamento dos serviços de dominio de cliente e veículo na ordem de serviço)
-const VehicleService = require("../Services/vehicleService")
-const CustomerService = require("../Services/customerService")
+const VehicleService = require("./vehicleService")
+const CustomerService = require("./customerService")
 
 class RentalService {
     constructor(rentalRepository, vehicleService, customerService) {
