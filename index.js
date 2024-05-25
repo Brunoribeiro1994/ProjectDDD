@@ -4,17 +4,17 @@ const CustomerRepository = require("./Repository/customerRepository")
 const Vehicle = require("./Domain/vehicle")
 const VehicleService = require("./Services/vehicleService")
 const VehicleRepository = require("./Repository/vehicleRepository")
-const Order = require("./Domain/order")
-const OrderService = require("./Services/orderService")
-const OrderRepository = require("./Repository/orderRepository")
+const Rental = require("./Domain/rental")
+const RentalService = require("./Services/rentalService")
+const RentalRepository = require("./Repository/rentalRepository")
 
 const customerRepository = new CustomerRepository();
 const vehicleRepository = new VehicleRepository();
-const orderRepository = new OrderRepository();
+const rentalRepository = new RentalRepository();
 
 const customerService = new CustomerService(customerRepository)
 const vehicleService = new VehicleService(vehicleRepository)
-const orderService = new OrderService(orderRepository, vehicleService, customerService)
+const rentalService = new RentalService(rentalRepository, vehicleService, customerService)
 
 
 const customer1 = customerService.createCustomer("Bruno Ribeiro", 1499999999, 41223949209, "brunoribeiro@gmail.com", 30);
@@ -29,16 +29,16 @@ console.log(vehicles)
 
 const initialData = new Date('2024-05-13');
 const FinalData = new Date('2024-05-28');
-let order = orderService.save(customer1.id, vehicle1, "PIX", initialData, FinalData, vehicle1.dailyValue)
+let rental = rentalService.save(customer1.id, vehicle1, "PIX", initialData, FinalData, vehicle1.dailyValue)
 
-console.log(order)
+console.log(rental)
 console.log('------------------------------------------------')
 
 
-if (order != null) {
-    orderService.updateOrderStatusById(order.id, "Pago")
-    console.log(orderService.findById(order.id))
-    console.log(customerRepository.findById(order.customerId))
+if (rental != null) {
+    rentalService.updateRentalStatusById(rental.id, "Pago")
+    console.log(rentalService.findById(rental.id))
+    console.log(customerRepository.findById(rental.customerId))
 }
 
 

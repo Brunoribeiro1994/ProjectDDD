@@ -23,7 +23,7 @@ class VehicleRepository {
     updateToUnavaiable(id) {
         this.vehicles.map(vehicle => {
             if(vehicle.id == id) {
-                order.available = 0
+                rental.available = 0
             }
         })
     }

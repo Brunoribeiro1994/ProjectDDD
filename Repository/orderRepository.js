@@ -1,24 +1,24 @@
 //Repositório de dominio do contexto ordem de serviço
-class OrderRepository {
+class RentalRepository {
     constructor() {
-        this.orders = []
+        this.rentals = []
     }
 
-    save(order) {
-        this.orders.push(order)
+    save(rental) {
+        this.rentals.push(rental)
     }
 
     findById(id) {
-        return this.orders.find(order => order.id == id)
+        return this.rentals.find(rental => rental.id == id)
     }
 
     updateStatusById(id, status) {
-        this.orders.map(order => {
-            if(order.id == id) {
-                order.status = status
+        this.rentals.map(rental => {
+            if(rental.id == id) {
+                rental.status = status
             }
         })
     }
 }
 
-module.exports = OrderRepository
+module.exports = RentalRepository
